@@ -40,12 +40,9 @@
 
 //we are calling the method in constructor.So we mentioning new --we are creating obj for constructor
 
-import { test, expect } from '@playwright/test';
-import { Login } from '../src/pages/login-page';///for importing login page.ts -- to take clas
-//  const Login1 = require('../src/pages/login-page')
-test('has title', async ({ page }) => {
-  const logObj=new Login(page)
-  await logObj.Login()//method
-  
-
- });
+import { test, expect, chromium } from '@playwright/test';
+const browser =await chromium.launch();
+const context = await browser.newContext();
+const page = await context.newPage();
+await page.goto('https://procurementqat.caresoftglobal.com');
+// cont cookies

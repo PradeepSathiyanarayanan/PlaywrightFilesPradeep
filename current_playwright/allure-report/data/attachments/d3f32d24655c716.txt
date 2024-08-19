@@ -1,0 +1,3 @@
+passed
+Vehicle Title is visible
+Vehicle Title is present

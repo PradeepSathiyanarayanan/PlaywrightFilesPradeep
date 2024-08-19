@@ -1,0 +1,3 @@
+Error: Multiple step definitions matched for text: "click sample Technical Publication page" (P:\Action\.features-gen\features\test.feature.spec.js)
+  click sample Technical Publication page - steps\login-step.ts:20
+  click sample Technical Publication page - steps\login-step.ts:25

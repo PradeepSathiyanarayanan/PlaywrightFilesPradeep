@@ -1,0 +1,9 @@
+passed
+Vehicle Title is visible
+Vehicle Title is present
+Remarks test field is Empty--Passed
+Remarks test field is Editable--Passed
+Billable radio button is enabled [passed]
+Billable radio button is selected as No(passed)
+Work place field --caresoft otion is not selected---Passed
+Quoted_Source_Value field is disabled---Passed

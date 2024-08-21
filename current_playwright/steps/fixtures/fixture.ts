@@ -1,27 +1,18 @@
 import{test as base, createBdd} from "playwright-bdd";
-import { Login } from "../../src/pages/login-page";
-import { Navigate } from "../../src/pages/navigate-page";
-import { Reach } from "../../src/pages/pagemaster.page";
-import { Goto } from "../../src/pages/Transaction-page";
-
-
-
+import { Loginpage } from "../../src/pages/login-page";
+import { settingdropdown } from "../../src/pages/navigate-page";
+import { pagemaster_option } from "../../src/pages/pagemaster-page";
+import { Transaction } from "../../src/pages/transaction-page";
 type allStepClass ={
-    login:Login;
-    navigate:Navigate;
-    pagemaster:Reach
-    transaction:Goto
-  
+    login:Loginpage;
+    navigate:settingdropdown;
+    pagemaster:pagemaster_option;
+    transaction:Transaction;
 }
-
 export const test=base.extend<allStepClass>({
-    login:async({page}, use )=>{await use(new Login(page));},
-    
-     navigate:async({page}, use )=>{await use(new Navigate(page));},
-     pagemaster:async({page},use)=>{await use(new Reach(page));},
-     transaction:async({page},use)=>{await use(new Goto(page));}
-
-
-
+    login:async({page}, use )=>{await use(new Loginpage(page))},
+    navigate:async({page},use)=>{await use(new settingdropdown(page))},
+    pagemaster:async({page},use)=>{await use(new pagemaster_option(page))},
+    transaction:async({page},use)=>{await use(new Transaction(page))},
 })
-// await this.page.locator('[class="dropdown-item"]').getByText(Manage Form and Uploader).click();
+

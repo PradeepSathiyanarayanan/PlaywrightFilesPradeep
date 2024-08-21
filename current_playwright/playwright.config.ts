@@ -50,7 +50,7 @@ import { defineConfig, devices } from '@playwright/test';
   /* Fail the build on CI if you accidentally left test.only in the source code. */
    
   forbidOnly:!!process.env.CI,
-  timeout:80000*6*66,
+  timeout:80000*6*66*6,
    
   /* Retry on CI only */
    

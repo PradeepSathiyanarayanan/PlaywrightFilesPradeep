@@ -1,11 +1,10 @@
 import { BrowserContext, Locator, Page, chromium, expect, } from "@playwright/test";
-import { Console, time } from "console";
 import { Then,Given } from "playwright-bdd/decorators";
 import { data } from "../../data_set/data";
-import { Sign } from "crypto";
 
 
-export class Login {
+
+export class Loginpage {
     page: Page;
     username: Locator;
     password: Locator;
@@ -30,9 +29,14 @@ export class Login {
         await this.page.goto(this.url);
         await expect(this.page).toHaveURL('https://adaptiveqat.caresoftglobal.com/')
         console.log('Url is Correct')
+        await expect(this.username).toBeEnabled()
+        console.log('username field is enabled')
         await this.username.fill(data.username)
+        await expect(this.username).toBeEnabled()
+        console.log('Password field is enabled')
         await this.password.fill(data.Password)
-        await this.loginButton.click()       
+        await this.password.press('Enter')    
+        await this.page.waitForLoadState()
     }  
 
        

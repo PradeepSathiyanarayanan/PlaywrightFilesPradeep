@@ -1,0 +1,6 @@
+Url is Correct
+username field is enabled
+Password field is enabled
+checkbox is not enabled
+Consider form as a checkbox is enabled
+column width field is  is empty
